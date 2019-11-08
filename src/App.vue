@@ -1,12 +1,15 @@
 <template>
- 
+  <div>
+    <router-view></router-view>
+    <FooterGuide/>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import FooterGuide from './components/FooterGuide/FooterGuide'
 
 export default {
- 
+   components:{FooterGuide}
   }
 
 </script>

@@ -2,13 +2,18 @@ import Vue from 'vue'
 import App from './App.vue'
 import  'lib-flexible/flexible'
 
-Vue.config.productionTip = false
 
+import router from './router'
+import GshopHeader from './components/GshopHeader/GshopHeader.vue'
+
+Vue.config.productionTip = false
+Vue.component('GshopHeader',GshopHeader)
 // new Vue({
 //   render: h => h(App),
 // }).$mount('#app')
 new Vue({
   el:'#app',
   components:{App},
-  template:'<App/>'
+  template:'<App/>',
+  router
 })
