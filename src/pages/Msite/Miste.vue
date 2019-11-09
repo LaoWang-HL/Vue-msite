@@ -15,7 +15,7 @@
         </header> -->
         <!--首页导航-->
          
-        <GshopHeader  title="昌平区北七家宏福科技园(337省道北)" class="">
+        <GshopHeader  :title="address.name?address.name:'定位中...'" class="">
            <span slot="left" class="header_search">
               <i class="iconfont icon-sousuo"></i>
             </span>
@@ -324,8 +324,18 @@
   </div>
 </template>
 
-<script type="text/ecmascript-6">
+<script >
+import Swiper from 'swiper'
+import 'swiper/css/swiper.min.css'
+import _ from 'lodash'
+ import {mapState} from 'vuex'
   export default {
+     async mounted() {
+       this.$store.dispatch('getAddressAction')
+     },
+     computed: {
+       ...mapState(['address'])
+     },
   }
 </script>
 

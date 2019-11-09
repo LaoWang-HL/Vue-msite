@@ -8,7 +8,7 @@
         </header> -->
         <GshopHeader title='我的'/>
         <section class="profile-number">
-          <a href="javascript:" class="profile-link">
+          <a @click="toAdmin" href="javascript:" class="profile-link">
             <div class="profile_image">
               <i class="iconfont icon-person_round_fill"></i>
             </div>
@@ -100,7 +100,11 @@
 
 <script type="text/ecmascript-6">
   export default {
-
+    methods: {
+      toAdmin(){
+        this.$router.replace('/admin')
+      }
+    },
   }
 </script>
 
