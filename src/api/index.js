@@ -7,3 +7,12 @@ export const getAddress=(latitude,longitude)=>ajax({
 export const getCategorys=()=>ajax({
   url:'/index_category'
 })
+
+
+export const getShops=(latitude,longitude)=>ajax({
+  url:'/shops',
+  params:{
+    latitude,
+    longitude
+  }
+})

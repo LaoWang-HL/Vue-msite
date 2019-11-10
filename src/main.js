@@ -8,6 +8,7 @@ import GshopHeader from './components/GshopHeader/GshopHeader.vue'
 
 Vue.config.productionTip = false
 Vue.component('GshopHeader',GshopHeader)
+
 // new Vue({
 //   render: h => h(App),
 // }).$mount('#app')

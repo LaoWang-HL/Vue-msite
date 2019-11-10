@@ -1,6 +1,7 @@
 import {
   SAVE_ADDRESS,
-  SAVE_CATEGORYS
+  SAVE_CATEGORYS,
+  SAVE_SHOPS
 
 } from './mutations-type'
 
@@ -10,5 +11,8 @@ export default {
   },
   [SAVE_CATEGORYS](state,{categorys}){
     state.categorys=categorys
-  }
+  },
+  [SAVE_SHOPS](state,{shops}){
+    state.shops=shops
+  },
 }
