@@ -3,7 +3,7 @@
     <span class="star-item" :class="starClass" v-for="(starClass, index) in starClassArr" :key="index"></span>
   </div>
 </template>
-
+t
 <script>
 export default {
 props:{
@@ -13,7 +13,7 @@ props:{
     }
 },
 computed:{
-  startClassArr(){
+  starClassArr(){
       let {rating}=this
       let classArr=[]
 
