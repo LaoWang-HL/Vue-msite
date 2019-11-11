@@ -6,7 +6,10 @@
             <span class="header_title_text">我的</span>
           </a>
         </header> -->
-        <GshopHeader title='我的'/>
+        <GshopHeader title='我的'>
+          
+
+        </GshopHeader>
         <section class="profile-number">
           <a @click="toAdmin" href="javascript:" class="profile-link">
             <div class="profile_image">
@@ -51,7 +54,7 @@
             <div class="my_order_div">
               <span>我的订单</span>
               <span class="my_order_icon">
-                <i class="iconfont icon-jiantou1"></i>
+                <i class="iconfont icon-youjiantou1"></i>
               </span>
             </div>
           </a>
@@ -63,7 +66,7 @@
             <div class="my_order_div">
               <span>积分商城</span>
               <span class="my_order_icon">
-                <i class="iconfont icon-jiantou1"></i>
+                <i class="iconfont icon-youjiantou1"></i>
               </span>
             </div>
           </a>
@@ -75,7 +78,7 @@
             <div class="my_order_div">
               <span>硅谷外卖会员卡</span>
               <span class="my_order_icon">
-                <i class="iconfont icon-jiantou1"></i>
+                <i class="iconfont icon-youjiantou1"></i>
               </span>
             </div>
           </a>
