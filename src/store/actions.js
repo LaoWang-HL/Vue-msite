@@ -1,7 +1,8 @@
 import {
   SAVE_ADDRESS,
   SAVE_CATEGORYS,
-  SAVE_SHOPS
+  SAVE_SHOPS,
+  SAVE_USER
 
 } from './mutations-type'
 import {
@@ -30,5 +31,10 @@ export default {
     if(result.code===0){
       commit(SAVE_SHOPS,{shops:result.data})
     }
+  },
+  getUserAction({commit},{user}){
+    commit(SAVE_USER,{token:user.token})
+    delete user.token
+    commit(SAVE_USER,{user})
   }
 }

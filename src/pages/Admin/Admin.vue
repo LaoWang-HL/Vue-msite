@@ -115,6 +115,7 @@
          }
          if (result.code===0) {
           alert('登陆成功')
+          this.$store.dispatch('getUserAction',{user:result.data})
           this.$router.replace('/profile')
         }
         }
