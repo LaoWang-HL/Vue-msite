@@ -16,16 +16,16 @@
               <i class="iconfont icon-person_round_fill"></i>
             </div>
             <div class="user-info">
-              <p class="user-info-top" v-if="user.name">{{user.name?user.name:'登录/注册'}}</p>
-              <p>
+              <p class="user-info-top" v-if="!user.phone">{{user.name?user.name:'登录/注册'}}</p>
+              <p  v-if="!user.name">
                 <span class="user-icon">
                   <i class="iconfont icon-shouji icon-mobile"></i>
                 </span>
-                <span class="icon-mobile-number" v-if="user.phone">{{user.phone?user.phone:'暂无存储手机号'}}</span>
+                <span class="icon-mobile-number">{{user.phone?user.phone:'暂无存储手机号'}}</span>
               </p>
             </div>
-            <span class="arrow">
-              <i class="iconfont icon-jiantou1"></i>
+            <span class="arrow" >
+              <i class="iconfont icon-jiantou-you"></i>
             </span>
           </a>
         </section>
@@ -97,12 +97,17 @@
             </div>
           </a>
         </section>
+        <section class="profile_my_order border-1px">
+        <mt-button @click="logout" style="width: 100%" type="danger">退出登录</mt-button>
+        </section>
       </section>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
 import {mapState} from 'vuex'
+import {LOGOUT} from '../../store/mutations-type'
+import {MessageBox} from 'mint-ui'
   export default {
     methods: {
       toAdmin(){
@@ -112,12 +117,23 @@ import {mapState} from 'vuex'
           this.$router.replace('/admin')
         }
         
+      },
+      logout(){
+       MessageBox.confirm('确认退出登录吗')
+        .then(
+          actionAgree=>{this.$store.commit(LOGOUT);this.$router.replace('/admin')},
+          actionReject=>console.log('取消退出')
+        )
       }
+     
     },
     computed: {
       ...mapState({
         user:state=>state.user
       })
+    },
+    mounted() {
+      this.$store.dispatch('autoLoginAction')
     },
   }
 </script>
@@ -171,9 +187,9 @@ import {mapState} from 'vuex'
                 position absolute
                 right 15px
                 top 40%
-                .icon-jiantou1
+                .icon-jiantou-you
                   color #fff
-                  font-size 5px
+                  font-size 25px
           .profile_info_data
             bottom-border-1px(#e4e4e4)
             width 100%
