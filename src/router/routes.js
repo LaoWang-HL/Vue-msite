@@ -3,6 +3,10 @@ import Order from '../pages/Order/Order'
 import Search from '../pages/Search/Search'
 import Profile from '../pages/Profile/Profile'
 import Admin from '../pages/Admin/Admin.vue'
+import Shop from '../pages/Shop/Shop.vue'
+import Info from '../pages/Shop/Info/Info.vue'
+import Goods from '../pages/Shop/Goods/Goods.vue'
+import Rating from '../pages/Shop/Rating/Rating.vue'
 
 
 
@@ -41,6 +45,29 @@ export default[
     meta:{
       isShowFooterGuide:false
     }
+  },
+  {
+    path:'/shop',
+    component:Shop,
+    children:[
+      {
+        path:'/shop/goods',
+        component:Goods
+      },
+      {
+        path:'/shop/info',
+        component:Info
+      },
+      {
+        path:'/shop/rating',
+        component:Rating
+      },
+      {
+        path:'/shop',
+        component:Goods
+      }
+
+    ]
   },
   {
     path:'/',

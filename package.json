@@ -17,6 +17,7 @@
     "mint-ui": "^2.2.13",
     "mockjs": "^1.1.0",
     "postcss-px2rem": "^0.3.0",
+    "px2rem-loader": "^0.1.9",
     "stylus": "^0.54.7",
     "stylus-loader": "^3.0.2",
     "swiper": "^5.2.0",
