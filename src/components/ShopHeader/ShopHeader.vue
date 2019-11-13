@@ -3,7 +3,7 @@
     <nav class="shop-nav"
          style="background-image: url('https://fuss10.elemecdn.com/f/5c/ead54394c3de198d3e6d3e9111bbfpng.png');">
       <a class="back">
-        <i class="iconfont icon-jiantouzuo"/>
+        <i class="iconfont icon-zuojiantou" @click="$router.replace('/msite')"/>
       </a>
     </nav>
     <div class="shop-content">
@@ -148,7 +148,7 @@
         position: absolute
         top: 10px
         left: 0
-        .icon-jiantouzuo
+        .icon-zuojiantou
           display: block
           padding: 5px
           font-size: 20px
