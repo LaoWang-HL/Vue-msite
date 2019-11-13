@@ -56,3 +56,8 @@ export const autoLogin=()=>ajax({
     needToken: true
   }
 })
+
+//请求mock
+export const getShopDatas=()=>ajax({
+  url:'/shopDatas'
+})

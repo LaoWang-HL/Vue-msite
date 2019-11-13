@@ -5,6 +5,7 @@ import './veevalidata'
 import store from './store'
 import * as API from './api'
 import {Button} from 'mint-ui'
+import './mock/mockServer'
 
 import router from './router'
 import GshopHeader from './components/GshopHeader/GshopHeader.vue'
