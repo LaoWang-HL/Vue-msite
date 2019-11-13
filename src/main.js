@@ -9,9 +9,10 @@ import './mock/mockServer'
 
 import router from './router'
 import GshopHeader from './components/GshopHeader/GshopHeader.vue'
-
+import CartControl from './components/CartControl/CartControl.vue'
 Vue.config.productionTip = false
 Vue.component('GshopHeader',GshopHeader)
+Vue.component('CartControl',CartControl)
 Vue.prototype.$API=API
 Vue.component(Button.name,Button)
 // new Vue({

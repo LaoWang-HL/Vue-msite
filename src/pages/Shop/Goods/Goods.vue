@@ -28,7 +28,7 @@
                   <span class="now">￥{{food.price}}</span>
                 </div>
                 <div class="cartcontrol-wrapper">
-                  CartControl组件
+                  <CartControl :food="food"/>
                 </div>
               </div>
             </li>
@@ -87,7 +87,8 @@ import {mapState} from 'vuex'
         
         this.rightScroll=new BScroll('.rightContainer',{
           scrollY:true,
-          probeType:2
+          probeType:2,
+          click:true
         })
         this.rightScroll.on('scroll',({x,y})=>{
           this.scrollY=Math.abs(y)
