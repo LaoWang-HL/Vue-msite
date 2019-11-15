@@ -4,7 +4,8 @@ import {
   SAVE_SHOPS,
   SAVE_USER,
   SAVE_TOKEN,
-  LOGOUT
+  LOGOUT,
+  CLEAR_CARTSHOPS
 } from './mutations-type'
 
 export default {
@@ -29,5 +30,6 @@ export default {
     state.user={},
     state.token='',
     localStorage.removeItem('token_key')
-  }
+  },
+  
 }

@@ -3,7 +3,7 @@
     <transition name="move">
       <div class="iconfont icon-jianhao" v-show="food.count" @click="updateFoodCount(false)"></div>
     </transition>
-    <div class="cart-count">{{food.count}}</div>
+    <div class="cart-count"  v-show="food.count">{{food.count}}</div>
     <div class="iconfont icon-add" @click="updateFoodCount(true)"></div>
   </div>
 </template>
@@ -51,6 +51,7 @@ import {ADD_FOOD_COUNT,DEL_FOOD_COUNT} from '../../store/mutations-type'
       margin 0 8px
     .icon-add
       font-size 20px
+      
       padding: 4px
       
       color $green

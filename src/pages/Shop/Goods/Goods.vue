@@ -39,6 +39,7 @@
         </li>
       </ul>
    </div>
+   <ShopCart/>
  </div>
  
 
@@ -47,7 +48,11 @@
 <script type="text/ecmascript-6">
 import BScroll  from 'better-scroll'
 import {mapState} from 'vuex'
+import ShopCart from '../../../components/ShopCart/ShopCart'
   export default {
+    components:{
+     ShopCart
+    },
     data() {
       return {
         scrollY:0,
@@ -88,7 +93,7 @@ import {mapState} from 'vuex'
         this.rightScroll=new BScroll('.rightContainer',{
           scrollY:true,
           probeType:2,
-          click:true
+         // click:true
         })
         this.rightScroll.on('scroll',({x,y})=>{
           this.scrollY=Math.abs(y)
